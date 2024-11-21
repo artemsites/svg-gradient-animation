@@ -20,23 +20,22 @@
   </svg>
 
   <style>
-    @keyframes gradientAnimation {
-      0% {
-        stop-color: #ff0000;
-      }
+@keyframes gradientAnimation {
+  0% {
+    stop-color: #ff0000;
+  }
+  100% {
+    stop-color: #ff0000;
+  }
+}
 
-      50% {
-        stop-color: #ffff00;
-      }
+#gradient stop:first-child {
+  animation: gradientAnimation 5s linear infinite;
+}
 
-      100% {
-        stop-color: #00ff00;
-      }
-    }
-
-    #gradient stop {
-      animation: gradientAnimation 5s ease infinite;
-    }
+#gradient stop:last-child {
+  animation: gradientAnimation 5s linear reverse infinite;
+}
   </style>
 
 </body>
